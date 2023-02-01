@@ -31,7 +31,6 @@ resource "aws_instance" "workshop_instance" {
   depends_on = [data.aws_ami.ubuntu ]
 }
 
-
 data "aws_ami" "ubuntu" {
   most_recent = true
   filter {
