@@ -22,6 +22,7 @@ jobs:
        with:
           role-to-assume: arn:aws:iam::946412843100:role/OIDC_Link
           role-session-name: samplerolesession
+          aws-region: us-east-1
         
      - name: Setup Terraform
        uses: hashicorp/setup-terraform@v1
