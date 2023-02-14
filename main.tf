@@ -4,7 +4,7 @@ resource "aws_instance" "app" {
 }
 resource "null_resource" "PowerShellScript" {
   provisioner "local-exec" {
-    command = ".\script.ps1"
+    command = "'.script.ps1'"
     interpreter = ["pwsh", "-Command"]
   }
 }
