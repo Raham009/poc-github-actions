@@ -1,0 +1,46 @@
+name: "Terraform-aws-oidc-ps-workflow"
+
+on:
+  push:
+    branches:
+      - feature-1
+# permission can be added at job level or workflow level    
+permissions:
+      id-token: write   # This is required for requesting the JWT
+      contents: read    # This is required for actions/checkout
+
+jobs:
+  terraform:
+    name: "Terraform"
+    runs-on: ubuntu-latest
+    steps:
+     - name: Git clone the repository
+       uses: actions/checkout@v3
+        
+     - name: configure aws credentials
+       uses: aws-actions/configure-aws-credentials@v1
+       with:
+          role-to-assume: arn:aws:iam::946412843100:role/OIDC_Link
+          role-session-name: samplerolesession
+          aws-region: us-east-1
+        
+     - name: Setup Terraform
+       uses: hashicorp/setup-terraform@v1
+       with:
+          terraform_version: 1.0.1
+          terraform_wrapper: false
+
+     - name: Terraform Format
+       id: fmt
+       run: terraform fmt
+
+     - name: Terraform Init
+       id: init
+       run: terraform init
+
+     - name: Terraform Plan
+       id: plan
+       run: terraform plan
+
+     - name: Terraform Apply
+       run: terraform apply --auto-approve
