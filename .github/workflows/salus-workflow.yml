@@ -2,7 +2,7 @@ name: salus
 on:
   push:
     branches:
-      - poc-sast
+      - main
 
 jobs:
   salus_scan_job:
