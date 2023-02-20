@@ -3,7 +3,7 @@ name: Security check - Bandit
 on:
   push:
     branches:
-      - poc-sast
+      - main
 jobs:
   bandit:
     name: "Security check - Bandit"
