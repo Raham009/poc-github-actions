@@ -1,0 +1,11 @@
+Finding:     aws_secret="AKIAIMNOJVGFCVITXE4OA"
+RuleID:      aws-access-token
+Secret       AKIAIMNOJ99CHJFJXXE4OA
+Entropy:     3.65
+File:        checks_test.go
+Line:        37
+Commit:      ec2fc9d6cb09ahki8b3b57201cf6133c48d8ca0d29
+Author:      Zachary Rice
+Email:       zohs@email.com
+Date:        2018-01-28T17:39:00Z
+Fingerprint: ec2kns98d6cb0954fb3b57201cf6133c48d8ca0d29:checks_test.go:aws-access-token:37
