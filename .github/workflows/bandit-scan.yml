@@ -3,7 +3,7 @@ name: Security check - Bandit-1
 on:
   push:
     branches:
-      - poc-sast
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
