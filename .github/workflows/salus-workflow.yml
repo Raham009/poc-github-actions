@@ -20,12 +20,12 @@ jobs:
 
         # active_scanners: "\n  - Brakeman"
         # enforced_scanners: "none"
-    - name: Tar files
-      run: tar -cvf salus_reports.tar output/salus-report.json
+        #- name: Tar files
+        #run: tar -cvf salus_reports.tar output/salus-report.json
 
     - name: Security check report artifacts
       uses: actions/upload-artifact@v3
       if: failure()
       with:
         name: Security report
-        path: salus_reports.tar
+        path: output/salus-report.json
