@@ -3,7 +3,7 @@ name: Security check - Bandit
 on:
   push:
     branches:
-      - main
+      - poc-sast
 jobs:
   bandit:
     name: "Security check - Bandit"
@@ -18,8 +18,8 @@ jobs:
      - run: python test.py
      
      - name: Security check report artifacts
-       uses: actions/upload-artifact@v1
-       # if: failure()
+       uses: actions/upload-artifact@v3
+         #if: failure()
        with:
          name: Security report
          path: output/security_report.txt
