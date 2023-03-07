@@ -28,4 +28,12 @@ jobs:
       if: failure()
       with:
         name: Security report
-        path: output/salus-report.json
+        path: output
+    - name: Download artifacts
+      uses: actions/download-artifact@v3
+      if: failure()
+      with:
+        name: Security report
+    - name: Output contents
+      run: ls
+
