@@ -46,7 +46,7 @@ def main():
         print('[*] Quitting...')
         pass
     except Exception as ex:
-        print("[!] Exception occurred ('%s')" % ex)
+       # print("[!] Exception occurred ('%s')" % ex)
     finally:
         httpd.server_close()
         os._exit(0)
