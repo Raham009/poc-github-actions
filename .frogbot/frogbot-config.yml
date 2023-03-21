@@ -12,6 +12,7 @@
       # List of branches to scan
       branches:
         - poc-jfrog-xray
+        - main
 
     # Frogbot scanning parameters
     scan:
