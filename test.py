@@ -10,11 +10,11 @@ num = 5;
 print("Factorial of",num,"is",
 factorial(num))
 
-username = "xyJNKj78y7mz"
-password ="dgna@1788BNKnjgUYI80"
+username = "xyz"
+password ="dgna@1788BNK"
 
-api_key = "aKNBJHUHVRUIJBBYI76789"
-token = "AJNBT8799FVjnVGF97H"
+api_key = "aKNBBYI76789"
+token = "AJNBT8799FVH"
 
 
 import os
